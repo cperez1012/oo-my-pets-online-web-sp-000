@@ -9,7 +9,7 @@ class Dog
     @owner = owner
     @mood = "nervous"
     @owner.new_dog(self)
-end
+  end
 
   def self.all
     @@all
