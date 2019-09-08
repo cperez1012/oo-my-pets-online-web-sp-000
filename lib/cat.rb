@@ -9,10 +9,18 @@ class Cat
     @name = name
     @owner = owner
     @mood = "nervous"
-    owner.new_cat(self)
+    @owner.new_cat(self)
   end
 
   def self.all
     @@all
+  end
+
+  def self.count
+    self.all.count
+  end
+
+  def self.reset_all
+    self.all.clear
   end
 end
