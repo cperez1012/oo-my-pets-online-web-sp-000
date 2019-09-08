@@ -12,5 +12,5 @@ class Cat
     @owner.new_cat(self)
   end
 
-\
+
 end
