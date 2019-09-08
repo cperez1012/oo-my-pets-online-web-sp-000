@@ -13,6 +13,6 @@ class Cat
   end
 
   def self.all
-    self.all
+    self
   end
 end
