@@ -12,7 +12,5 @@ class Cat
     @owner.new_cat(self)
   end
 
-  def self.all
-    @@all
-  end
+\
 end
