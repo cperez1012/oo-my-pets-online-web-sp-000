@@ -40,11 +40,11 @@ class Owner
   end
 
   def new_dog(dog)
-    @dogs<<dog
+    @dogs << dog
   end
 
   def new_cat(cat)
-    @cats<<cat
+    @cats << cat
   end
 
   def walk_dogs
