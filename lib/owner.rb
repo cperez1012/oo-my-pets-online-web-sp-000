@@ -1,21 +1,14 @@
 class Owner
-  # code goes here
-  attr_accessor :owner, :cats, :dogs
-  attr_reader :species, :name
+  attr_reader :name, :species, :cats, :dogs
 
   @@all = []
 
   def initialize(name)
     @name = name
     @species = "human"
-    @cats = []
-    @dogs = []
-    @@all << self
-
-  end
-
-  def say_species
-    "I am a #{species}."
+    @cats=[]
+    @dogs=[]
+    @@all<<self
   end
 
   def self.all
@@ -23,27 +16,35 @@ class Owner
   end
 
   def self.count
-    @@all.size
+    self.all.count
   end
 
   def self.reset_all
-    @@all.clear
+    self.all.clear
   end
 
-  def cats
-    @cats << cat
+  def species
+    @species
   end
 
-  def dogs
-    @dogs << dog
+  def say_species
+    "I am a #{@species}."
   end
 
-  def buy_cat(cat)
-    Cat.new(cat, self)
+  def buy_cat(name)
+    Cat.new(name, self)
   end
 
   def buy_dog(name)
     Dog.new(name, self)
+  end
+
+  def new_dog(dog)
+    @dogs<<dog
+  end
+
+  def new_cat(cat)
+    @cats<<cat
   end
 
   def walk_dogs
@@ -66,4 +67,6 @@ class Owner
   def list_pets
     "I have #{@dogs.count} dog(s), and #{@cats.count} cat(s)."
   end
+
+
 end
